@@ -28,8 +28,8 @@ jobs:
 
       - name: 'Build and push'
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/uas-sister .
-          docker push ${{ secrets.DOCKERHUB_USERNAME}}/uas-sister
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/kuis2 .
+          docker push ${{ secrets.DOCKERHUB_USERNAME}}/-kuis2
       - name: 'Write config'
         run: |
           mkdir ~/.oci
