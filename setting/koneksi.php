@@ -1,7 +1,14 @@
 <?php
-   define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
-   define('DB_DATABASE', 'yudhatpm_perpustakaan');
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+
+$server = "db";
+$user = "MYSQL_USER";
+$password = "MYSQL_PASSWORD";
+$nama_database = "MYSQL_DATABASE";
+
+$db = mysqli_connect($server, $user, $password, $nama_database);
+
+if( !$db ){
+    die("Gagal terhubung dengan database: " . mysqli_connect_error());
+}
+
 ?>
